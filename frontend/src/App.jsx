@@ -15,7 +15,7 @@ export default function CounterApp() {
     // Fetch initial data from the API
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/user");
+        const res = await axios.get("https://counter-task-d14r.onrender.com/api/user");
         setCounter(res.data.counter);
         setBonus(res.data.bonus);
         setPrizes(res.data.prizes);
@@ -31,7 +31,7 @@ export default function CounterApp() {
 
   const handleClick = async () => {
     try {
-      const res = await axios.post("http://localhost:5000/api/update");
+      const res = await axios.post("https://counter-task-d14r.onrender.com/api/update");
       setCounter(res.data.counter);
       setBonus(res.data.bonus);
       setPrizes(res.data.prizes);
@@ -47,7 +47,7 @@ export default function CounterApp() {
 
   const handleReset = async () => {
     try {
-      const res = await axios.post("http://localhost:5000/api/reset");
+      const res = await axios.post("https://counter-task-d14r.onrender.com/api/reset");
       setCounter(0);
       setBonus(0);
       setPrizes(0);
